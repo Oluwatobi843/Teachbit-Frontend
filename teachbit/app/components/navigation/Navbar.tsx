@@ -6,8 +6,8 @@ import { Button } from '../ui/button';
 
 const Navbar = () => {
   return (
-    <div>
-      <div className='flex justify end'>
+    <div className="sticky top-0 bg-white z-50">
+      <div className="main-padding flex justify-between items-center py-6">
         <div>
           <Image
             width={100}
@@ -16,12 +16,21 @@ const Navbar = () => {
             alt="logo"
           />
         </div>
-        <div className="gap 6 flex flex-row">
-          <Link href="/">Home</Link>
-          <Link href="/our-academy">Our Academy</Link>
-          <Link href="/about-us">About Us</Link>
-          <a href="start-learning">
-            <Button>Start Learning</Button>
+        <div className="gap-6 flex flex-row">
+          <Link className="hover:text-[#E2B934]" href="/">
+            Home
+          </Link>
+          <Link className="hover:text-[#E2B934]" href="/our-academy">
+            Our Academy
+          </Link>
+          <Link className="hover:text-[#E2B934]" href="/about-us">
+            About Us
+          </Link>
+          <a
+            className="bg-[#E2B934] rounded-md cursor-pointer "
+            href="start-learning"
+          >
+            <Button className="bg-transparent  ">Start Learning</Button>
           </a>
         </div>
       </div>
