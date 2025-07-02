@@ -16,13 +16,13 @@ const LandingPage = () => {
         />
       </div>
 
-      <div className="absolute inset-0 justify-center items-center flex flex-col gap-16">
-        <h1 className="text-white">
-          Learn by Building. Master Tech Through Practice
+      <div className="absolute pt-35  inset-0 justify-center items-center flex flex-col gap-16">
+        <h1 className="text-white text-center leading-12 text-4xl font-bold">
+          Learn by Building. <br/> Master Tech Through Practice
         </h1>
-        <p className="text-white">
+        <p className="text-white text-center text-2xl leading-10 font-extralight -mt-6">
           Bridge the gap between knowledge and skill with real-world tech
-          training, guided projects, and hands-on learning
+          training, guided <br/> projects, and hands-on learning
         </p>
 
         <a
