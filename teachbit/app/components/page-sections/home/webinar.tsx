@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 const Webinar = () => {
   return (
     <div className='main-padding bg-[#FCF8EB] h-full w-full pt-50 lg:pt-10 z-30 pb-14'>
-      <h3 className='text-xl lg:text-4xl text-black font-bold text-center pt-8'>Free Webinar</h3>
+      <h3 className='text-xl lg:text-4xl text-black font-bold text-center pt-16 lg:pt-8'>Free Webinar</h3>
       <p className='text-base text-black font-normal text-center pt-6'>Don’t miss this chance to learn essential tech skills for free.</p>
 
       <div>

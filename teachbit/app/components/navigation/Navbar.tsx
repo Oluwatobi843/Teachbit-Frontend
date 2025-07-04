@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 // import logo from '../../../public/assets/images/Logo.svg';
 
 const Navbar = () => {
@@ -22,7 +22,10 @@ const Navbar = () => {
     return () => window.removeEventListener("click", handleClick);
   }, [open]);
 
-  const handleDropDownFocus = (state: boolean) => setOpen(!state);
+  const toggleMenu = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+    setOpen(prev => !prev);
+  };
 
   return (
     <div className="sticky main-padding py-4 lg:py-6 top-0 bg-white z-50">
@@ -70,33 +73,31 @@ const Navbar = () => {
             />
           </div>
           <div className="ml-[300px] md:ml-[490px] mt-5 text-[#E2B934]">
-            <div ref={dropdownRef}>
-              <div onClick={e => handleDropDownFocus(open)}>
-                <div className='-mt-14 -lg:mt-2 pb-2'>
-                  <Menu />
-                </div>
-                {open && (
-                  <div className="absolute w-full mt-2 bg-white left-0 p-3 z-50 shadow-lg">
-                    <div className="flex flex-col gap-3 pl-4 text-left text-sm">
-                      <Link className="hover:text-[#E2B934]" href="/">
-                        Home
-                      </Link>
-                      <Link className="hover:text-[#E2B934]" href="/our-academy">
-                        Our Academy
-                      </Link>
-                      <Link className="hover:text-[#E2B934]" href="/about-us">
-                        About Us
-                      </Link>
-                      <a
-                        className="bg-[#E2B934] w-32 rounded-md cursor-pointer"
-                        href="start-learning"
-                      >
-                        <Button className="bg-transparent cursor-pointer hover:opacity-80">Start Learning</Button>
-                      </a>
-                    </div>
-                  </div>
-                )}
+            <div>
+              <div onClick={toggleMenu} className='-mt-14 -lg:mt-2 pb-2 cursor-pointer'>
+                {open ? <X /> : <Menu />}
               </div>
+              {open && (
+                <div ref={dropdownRef} className="absolute w-full mt-2 bg-white left-0 p-3 z-50 shadow-lg">
+                  <div className="flex flex-col gap-3 pl-4 text-left text-sm">
+                    <Link className="hover:text-[#E2B934]" href="/">
+                      Home
+                    </Link>
+                    <Link className="hover:text-[#E2B934]" href="/our-academy">
+                      Our Academy
+                    </Link>
+                    <Link className="hover:text-[#E2B934]" href="/about-us">
+                      About Us
+                    </Link>
+                    <a
+                      className="bg-[#E2B934] w-32 rounded-md cursor-pointer"
+                      href="start-learning"
+                    >
+                      <Button className="bg-transparent cursor-pointer hover:opacity-80">Start Learning</Button>
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
