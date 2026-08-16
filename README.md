@@ -1,20 +1,57 @@
 # Teachbit Frontend
 
+> An education-focused frontend application for presenting teaching and learning workflows through a modern web interface.
+
 ## Overview
 
-Teachbit Frontend is an education/teaching-oriented web application interface focused on presenting learning and teaching workflows through a modern frontend.
+Teachbit Frontend is a product-oriented education interface designed around user-facing teaching and learning experiences. The project demonstrates reusable components, responsive layouts and application-level UI organization.
 
-## Project Focus
+## Key areas
 
 - Education product UI
-- Reusable components
+- Teaching and learning workflows
+- Reusable interface components
 - Responsive layouts
-- User-facing teaching/learning workflows
-- Frontend application architecture
+- User-facing application architecture
 
-## Portfolio Value
+## Architecture
 
-Demonstrates product-focused frontend engineering and complements backend/API work by showing experience building user-facing applications.
+```text
+User
+ |
+v
+Teachbit Interface
+ |
+ +--> Learning views
+ +--> Teaching views
+ +--> Navigation
+ +--> Reusable components
+```
+
+## Development
+
+Install the project dependencies using the package manager configured by the repository and run the development command defined by the project.
+
+```bash
+npm install
+npm start
+```
+
+## Engineering value
+
+The project demonstrates **product-focused frontend development, reusable component design, responsive UI and education-domain workflow modeling**. It complements the backend/API repositories by showing experience building interfaces around real application concepts.
+
+## Future improvements
+
+- Backend/API integration
+- Authentication
+- Course and lesson management
+- Teacher/student roles
+- Progress tracking
+- Automated frontend tests
 
 ## Author
-**Oluwatobi843** — https://github.com/Oluwatobi843
+
+**Oluwatobi843**
+
+GitHub: https://github.com/Oluwatobi843
